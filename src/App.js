@@ -17,11 +17,11 @@ class App extends Component {
           <h1>Trelloyes!</h1>
         </header>
         <div className='App-list'>
-          {this.state.lists.map(list => (
+          {this.state.store.lists.map(list => (
             <List
               key={list.id}
               header={list.header}
-              cards={list.cardIds.map(id => this.state.allCards[id])}
+              cards={list.cardIds.map(id => this.state.store.allCards[id])}
             ></List>
           ))}
         </div>
